@@ -6,6 +6,7 @@ angle = 360 / sides
 
 import math
 import turtle
+window = turtle.Screen()
 pen = turtle.Turtle()
 turtle.forward(length)
 turtle.right(angle)
