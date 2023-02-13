@@ -1,9 +1,3 @@
 import pygame
 
-pygame.init()
-
-screen = pygame.display.set_mode()
-screen.fill("red")
-pygame.display.flip()
-
-
+pygame.draw.circle(display, "pink", [0,0], 50)

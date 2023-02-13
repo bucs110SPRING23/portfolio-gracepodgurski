@@ -1,16 +1,19 @@
-
+import turtle
 sides = int(input("Please enter the number of sides:  "))
 length = int(input("Please enter the length of the sides:  "))
 angle = 360 / sides
 
-
-import math
-import turtle
-window = turtle.Screen()
 pen = turtle.Turtle()
-turtle.forward(length)
-turtle.right(angle)
+pen.color("black")
+
+
 window = turtle.Screen()
+
+
+for s in range(sides):
+    pen.forward(length)
+    pen.right(angle)
+  
 
 window.exitonclick()
 
