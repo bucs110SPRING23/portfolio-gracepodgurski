@@ -32,24 +32,24 @@
 # print(not True) #False
 
 # #Example2
-# a = int(input("num:"))
-# if a < 0: #COLON
-#     a = abs(a)
-# else: #no condition, always optional
-#     print("positive")
+a = int(input("num:"))
+if a < 0: #COLON
+    a = abs(a)
+else: #no condition, always optional
+    print("positive")
 
-# print(a) #de-indentation to end the if statement
+print(a) #de-indentation to end the if statement
 
-# #if statements - only one condition will execute 
-# ## All mutually exclusive statements, so we want most specific statement first
-# a = int(input("num:"))
-# if a > 10: #COLON
-#     print("x is greater than 10")
-# elif a > 5:
-#         print("x is greater than 5")
+#if statements - only one condition will execute 
+## All mutually exclusive statements, so we want most specific statement first
+a = int(input("num:"))
+if a > 10: #COLON
+    print("x is greater than 10")
+elif a > 5:
+        print("x is greater than 5")
 
-# else: #no condition, always optional
-#     print("x is less than or equal to 5")
+else: #no condition, always optional
+    print("x is less than or equal to 5")
 
 #elif 
 #always goes between if and else, is optional, and can have as many as you'd like
