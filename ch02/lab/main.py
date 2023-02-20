@@ -2,59 +2,66 @@
 
 import turtle 
 import random
-# don = random.randrange(1,100)
-# mic = random.randrange(1,100)
 
 window = turtle.Screen()
 
 # #Race 1
-# pen1 = turtle.Turtle()
-# pen1.color("black")
-# pen1.goto(-100,20)
-# pen1.forward(don)
+# don = turtle.Turtle()
+# don.color("black")
+# don.shape("turtle")
+# don.up()
 
-# pen2 = turtle.Turtle()
-# pen2.color("red")
-# pen2.goto(-100,-20)
-# pen2.forward(mic)
+# mic = turtle.Turtle()
+# mic.color("red")
+# mic.shape("turtle")
+# mic.up()
 
+# don.goto(-100,20)
+# mic.goto(-100,-20)
+# don.down()
+# mic.down()
+# don.forward(random.randrange(1,100))
+# mic.forward(random.randrange(1,100))
 
 # window.exitonclick()
-
 
 #Race 2
-# raph = int(random.randint(1,10))
-# leo = int(random.randint(1,10))
-# myturtles = [raph,leo]
-# print(myturtles)
+raph = turtle.Turtle()
+raph.color("blue")
+raph.shape("turtle")
+raph.up()
+raph.goto(-100,20)
 
-# for s in range(myturtles):
-# pen1 = turtle.Turtle()
-# pen1.color("black")
-# pen1.goto(-100,20)
-# pen1.forward(don)
+leo = turtle.Turtle()
+leo.color("green")
+leo.shape("turtle")
+leo.up()
+leo.goto(-100,-20)
 
-# pen2 = turtle.Turtle()
-# pen2.color("red")
-# pen2.goto(-100,-20)
-# pen2.forward(mic)
-
-# window.exitonclick()
-
-#Race 2.1
-def createTurtlePlayer(color, startx, starty): 
-    player=turtle.Turtle()
-    player.color(color) # set the color of turtle
-    player.shape("turtle") #set the shape as turtle
-    player.penup() #pen moves up
-    player.goto(startx, starty) #place player at mentioned position on race
-
-raph =createTurtlePlayer('red',-100,20)
-leo =createTurtlePlayer("blue",-100,-20)
-myturtles = (raph,leo)
-
-for s in range(myturtles):
+for s in range(0,10):
+    raph.down()
     raph.forward(int(random.randrange(1,10)))
+    leo.down()
     leo.forward(int(random.randrange(1,10)))
-    window.time.wait(20000)
+
+window.time.wait(20000)
 window.exitonclick()
+
+#Part B - Drawing Shapes 
+# triangle
+# square
+# hexagon (6 sides)
+# icosagon (20 sides)
+# Hectagon (100 sides)
+# circle -ish (360 sides)
+
+import pygame 
+import math
+pygame.init()
+window1 = pygame.display.set_mode()
+
+points = [10,10]
+side_length = int(50)
+num_sides = int()
+
+pygame.draw.polygon(window1, "pink", points)
