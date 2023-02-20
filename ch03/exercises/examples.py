@@ -74,11 +74,12 @@ for i in range(num+1):
      #if not i % 3: 
     if i % 3 == 0 and i % 5 ==0:
          print("fizzbuzz")
-    elif i % 3 == 0 :
+    elif i % 3 == 0 : # With elif, only one condition will execute 
         print("fizz")
     elif i % 5 == 0:
         print("buzz")
     
+
 
 
 
