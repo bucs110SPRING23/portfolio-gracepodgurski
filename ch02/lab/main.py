@@ -1,9 +1,9 @@
 #Part A
 
-import turtle 
-import random
+# import turtle 
+# import random
 
-window = turtle.Screen()
+# window = turtle.Screen()
 
 # #Race 1
 # don = turtle.Turtle()
@@ -59,26 +59,27 @@ import math
 pygame.init()
 window1 = pygame.display.set_mode()
 # Sides:
-tri = 3
-squ = 4
-hex = 6
-ico = 20
-hect = 100
-cir = 360
+# tri = 3
+# squ = 4
+# hex = 6
+# ico = 20
+# hect = 100
+# cir = 360
 
 side_length = 200
 xpos = 200
 ypos = 200
 
-sides = [3,4,6,20,100,360]
+
 # Create a for loop outside of the triangle one and make it applicable for all shapes
 points = []
+sides=[3,4,6,20,100,360]
 
 for i in range(6):
-    i = sides(1)
-
-    for s in range(sides):
-        angle = 360/tri
+    sides=[3,4,6,20,100,360]
+    sides_spot = int(sides[0])
+    for s in range(len(sides)):
+        angle = 360/sides_spot
         radians = math.radians(angle * s)
         x = xpos + side_length * math.cos(radians)
         y = ypos + side_length * math.sin(radians)
@@ -87,30 +88,5 @@ for i in range(6):
     pygame.draw.polygon(window1, "pink", points)
     pygame.display.flip()
     pygame.time.wait(2000)
-    i = sides(i+1)
-
-
-# sides = [tri,squ,hex,ico,hect,cir]
-# # xpos = 100
-# # ypos = 50
-# # points = [xpos,ypos]
-# points = [ [x1, y1], [x2, y2], [x3, y3]]
-# side_length = int(50)
-
-# pygame.draw.polygon(window1, "pink", points)
-
-# for s in sides:
-#     angle = 360/sides
-#     radians = math.radians(angle * s)
-#     x = xpos + side_length * math.cos(radians)
-#     y = ypos + side_length * math.sin(radians)
-#     pygame.draw.polygon(window1, "pink", points)
-#     pygame.display.flip()
-#     pygame.time.wait(2000)
-
-
-
-
-
-
+    # sides_spot = int(sides[i+1])
 
