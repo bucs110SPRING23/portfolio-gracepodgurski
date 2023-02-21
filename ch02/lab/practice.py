@@ -21,16 +21,19 @@ points = []
 sides=3
 rest = [4,6,20,100,360]
 
-for s in range(sides):
-    angle = 360/sides
+for s in range(3):
+    angle = 360/3
     radians = math.radians(angle * s)
     x = xpos + side_length * math.cos(radians)
     y = ypos + side_length * math.sin(radians)
     points.append([x,y])
 
+print(points)
+
 pygame.draw.polygon(window1, "pink", points)
+pygame.display.flip()
 pygame.time.wait(2000)
-#pygame.display.flip()
+
     # sides_spot = int(sides[i+1])
     # sides_spot = int(sides[i+1])
 
