@@ -2,8 +2,7 @@
 
 import turtle 
 import random
-import pygame
-import math
+
 window = turtle.Screen()
 
 #Race 1
@@ -55,8 +54,10 @@ window.exitonclick()
 
 #Part B - Drawing Shapes 
 #As of 2/20, I'm still trying to figure out this part
+import pygame
+import math
 pygame.init()
-window1 = pygame.display.set_mode()
+window = pygame.display.set_mode()
 # Sides:
 # tri = 3
 # squ = 4
@@ -65,7 +66,7 @@ window1 = pygame.display.set_mode()
 # hect = 100
 # cir = 360
 
-side_length = 200
+side_length = 50
 xpos = 200
 ypos = 200
 
@@ -74,7 +75,7 @@ ypos = 200
 points = []
 sides=[3,4,6,20,100,360]
 
-for i in range(6):
+for i in range(0,5):
     sides=[3,4,6,20,100,360]
     sides_spot = int(sides[0])
     for s in range(len(sides)):
@@ -84,8 +85,8 @@ for i in range(6):
         y = ypos + side_length * math.sin(radians)
         points.append([x,y])
 
-    pygame.draw.polygon(window1, "pink", points)
+    pygame.draw.polygon(window, "pink", points)
     pygame.display.flip()
     pygame.time.wait(2000)
-    # sides_spot = int(sides[i+1])
+    sides_spot = int(sides[i+1])
 
