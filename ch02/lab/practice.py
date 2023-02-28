@@ -1,11 +1,10 @@
 import pygame
 import math
 pygame.init()
+window = pygame.display.set_mode()
 
 while 1:
     pygame.event.pump()
-
-    window = pygame.display.set_mode()
 
     side_length = 10
     xpos = 100
