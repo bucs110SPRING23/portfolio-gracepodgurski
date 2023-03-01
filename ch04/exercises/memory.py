@@ -46,18 +46,51 @@ highlight_colors = {
 
 #additional state  data
 font = pygame.font.Font(None,48)
+
+# we want these to maintain state
+#invariant variable = don't want in the loop
 done = False
 result = []
 turns = 0
+
+#  used so we can shuffle the life of colors each time we run through the game
 order = list(hitboxes.keys())
 
 # Mainloop
 # each time through the while is one frame
 
-while not done:
+while not done: #true
     for event in pygame.event.get():
         if event.type == pygame.KEYDOWN:
-            
+            if event.key == pygame.K_SPACE:
+                random.shuffle(order)
+                turns = len(order)
+                result = []
+                for color in order:
+                    for c, hb in hitboxes.items():
+                        pygame.draw.rect(screen,main_colors[c],hb)
+                    pygame.draw.rect(screen,highlight_colors[color],hitboxes[color])
+                    pygame.display.flip()
+                    pygame.time.delay(1000)
+            elif event.key == pygame.K_q:
+                done = True
+        elif event.type == pygame.MOUSEDOWNBUTTON:
+
+# Idea of top down programming - outline program first and put in the details later
+#  use the word pass 
+
+    # for event in pygame.event.get():
+    #     if event.type == pygame.KEYDOWN:
+    #         pass
+    #     elif event.type == pygame.MOUSEDOWNBUTTON:
+    #         pass
+    #     elif event.type == pygame.KEYUP:
+    #         pass
+
+
+
+
+
 
 
 
