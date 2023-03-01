@@ -72,12 +72,13 @@ for i in sides:
         y = ypos + side_length * math.sin(radians)
         points.append([x,y])
     
-
     pygame.draw.polygon(window, "pink", points)
     pygame.display.flip()
     pygame.time.wait(2000)
-    # pygame.Surface.fill(window,"black",)
-    # pygame.display.flip()
+    
+    points  = []
+    window.fill("black")
+    pygame.display.flip()
 
 
 

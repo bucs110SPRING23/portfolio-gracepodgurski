@@ -75,6 +75,8 @@ while not done: #true
             elif event.key == pygame.K_q:
                 done = True
         elif event.type == pygame.MOUSEDOWNBUTTON:
+            turns = turns - 1
+         #  fill this in using the notes he posted from class
 
 # Idea of top down programming - outline program first and put in the details later
 #  use the word pass 
@@ -87,7 +89,19 @@ while not done: #true
     #     elif event.type == pygame.KEYUP:
     #         pass
 
+# 2. Updating Data
+    if result and not turns:
+  # if len(result) == len(order):
+        msg = [
+            f"You entered: {result}",
+            f"The correct pattern was: {order}",
+        ]
+    if result == order:
+        msg.append("Yay! You won.")
 
+    # still need  to finish filling this in
+
+# 3. Draw 
 
 
 
