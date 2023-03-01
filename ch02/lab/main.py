@@ -25,8 +25,6 @@ mic.down()
 don.forward(random.randrange(1,100))
 mic.forward(random.randrange(1,100))
 
-# window.exitonclick()
-
 #Race 2
 raph = turtle.Turtle()
 raph.color("blue")
@@ -51,28 +49,18 @@ raph.goto(-100,20)
 leo.up()
 leo.goto(-100,-20)
 
-# window.time.wait(20000)
-# window.exitonclick()
 
 #Part B - Drawing Shapes 
-#As of 2/20, I'm still trying to figure out this part
 
 pygame.init()
 window = pygame.display.set_mode()
-# Sides:
-# tri = 3
-# squ = 4
-# hex = 6
-# ico = 20
-# hect = 100
-# cir = 360
 
-side_length = 50
-xpos = 200
-ypos = 200
+side_length = 200
+dimensions = window.get_size()
+xpos = dimensions[0]//2
+ypos = dimensions[1]//2
 
 
-# Create a for loop outside of the triangle one and make it applicable for all shapes
 points = []
 sides=[3,4,6,20,100,360]
 
@@ -83,9 +71,15 @@ for i in sides:
         x = xpos + side_length * math.cos(radians)
         y = ypos + side_length * math.sin(radians)
         points.append([x,y])
-
+    
+    # pygame.Surface.fill(window,"black",)
+    # pygame.display.flip()
     pygame.draw.polygon(window, "pink", points)
     pygame.display.flip()
     pygame.time.wait(2000)
-    # sides_spot = int(sides[i+1])
+
+
+
+
+
 
