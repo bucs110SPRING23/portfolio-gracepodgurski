@@ -14,6 +14,7 @@ while 1:
     starting_point = [dimensions[0]//2, dimensions[1]//2]
 
     pygame.draw.circle(screen,"yellow",center, 525)
+    pygame.display.flip()
 
     # distance_from_center = math.hypot(x1-x2, y1-y2) #the distance formula
     # is_in_circle = distance_from_center <= width/2 #screen width

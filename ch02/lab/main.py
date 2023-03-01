@@ -2,6 +2,8 @@
 
 import turtle 
 import random
+import pygame
+import math
 
 window = turtle.Screen()
 
@@ -23,7 +25,7 @@ mic.down()
 don.forward(random.randrange(1,100))
 mic.forward(random.randrange(1,100))
 
-window.exitonclick()
+# window.exitonclick()
 
 #Race 2
 raph = turtle.Turtle()
@@ -49,13 +51,12 @@ raph.goto(-100,20)
 leo.up()
 leo.goto(-100,-20)
 
-window.time.wait(20000)
-window.exitonclick()
+# window.time.wait(20000)
+# window.exitonclick()
 
 #Part B - Drawing Shapes 
 #As of 2/20, I'm still trying to figure out this part
-import pygame
-import math
+
 pygame.init()
 window = pygame.display.set_mode()
 # Sides:
@@ -75,11 +76,9 @@ ypos = 200
 points = []
 sides=[3,4,6,20,100,360]
 
-for i in range(0,5):
-    sides=[3,4,6,20,100,360]
-    sides_spot = int(sides[0])
-    for s in range(len(sides)):
-        angle = 360/sides_spot
+for i in sides:
+    for s in range(i):
+        angle = 360/i
         radians = math.radians(angle * s)
         x = xpos + side_length * math.cos(radians)
         y = ypos + side_length * math.sin(radians)
@@ -88,5 +87,5 @@ for i in range(0,5):
     pygame.draw.polygon(window, "pink", points)
     pygame.display.flip()
     pygame.time.wait(2000)
-    sides_spot = int(sides[i+1])
+    # sides_spot = int(sides[i+1])
 
