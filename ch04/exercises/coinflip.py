@@ -29,6 +29,7 @@ while in_screen:
     if abs(turtleX) > x_range or abs(turtleY) > y_range:
         in_screen = False
 
+# Instead  of doing it this way, we can turn this into a function
 
 
 
