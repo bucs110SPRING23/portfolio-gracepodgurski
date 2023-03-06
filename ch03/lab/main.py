@@ -47,4 +47,3 @@ while 1:
 
     break
 
-# Still working on this... I have been sick so I  am still trying to catch up  with this lab and the previous one
