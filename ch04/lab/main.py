@@ -35,34 +35,39 @@ while 1:
     friend = 0
     # players = [myself,friend]
 
-
-    score = 0
-    for i in range(20):
-        if (i % 2) == 0:
-            friend = score
-            x = "blue"
-        elif (i % 2) != 0:
-            myself = score
-            x = "orange"
-
+    for i in range(1,21):
         x = random.randrange(0,1050)
         y = random.randrange(0,1050)
         dart = [x,y]
         distance_from_center = math.hypot(abs(525-x),abs(525-y)) #the distance formula
-
-        if distance_from_center <= 525: #screen width
-            pygame.draw.circle(screen,x,dart, 5)
-            score = score + 1
+        if (i % 2) == 0:
+            x = "blue"
+            if distance_from_center <= 525: #screen width
+                pygame.draw.circle(screen,x,dart, 5)
+                friend = friend + 1
+            else:
+                pygame.draw.circle(screen,"red",dart, 5)
+            pygame.display.flip()
+            pygame.time.wait(2000)
         else:
-            pygame.draw.circle(screen,"red",dart, 5)
-        pygame.display.flip()
-        pygame.time.wait(2000)
-
-    print("My score is :", myself)
-    print("Your score is: ", friend)
+            x = "yellow"
+            if distance_from_center <= 525: #screen width
+                pygame.draw.circle(screen,x,dart, 5)
+                myself = myself + 1
+            else:
+                pygame.draw.circle(screen,"red",dart, 5)
+            pygame.display.flip()
+            pygame.time.wait(2000)
+    if myself > friend:
+        print("I won! My score is:", myself)
+    elif friend > myself:
+        print("You won! Your score is: ", friend)
+    else:
+        print("I guess we are good opponents... it's a tie")
 
     break
 
-    # font = pygame.font.Font(None, 48)
-    # text = font.render(<your message>, True, "white")
-    # screen.blit("text", (<x>, <y>)) # where <x> and<y> are coordinates on screen
+#  Still trying to figure out the part below
+# font = pygame.font.Font(None, 48)
+# text = font.render("", True, "white")
+# screen.blit("You won!", (200, 200)) # where <x> and<y> are coordinates on screen
