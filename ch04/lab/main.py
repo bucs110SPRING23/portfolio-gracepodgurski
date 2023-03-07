@@ -31,18 +31,38 @@ while 1:
     
     # print(x,y)
 
-    for s in range(10):
+    myself = 0
+    friend = 0
+    # players = [myself,friend]
+
+
+    score = 0
+    for i in range(20):
+        if (i % 2) == 0:
+            friend = score
+            x = "blue"
+        elif (i % 2) != 0:
+            myself = score
+            x = "orange"
+
         x = random.randrange(0,1050)
         y = random.randrange(0,1050)
         dart = [x,y]
         distance_from_center = math.hypot(abs(525-x),abs(525-y)) #the distance formula
 
         if distance_from_center <= 525: #screen width
-            pygame.draw.circle(screen,"black",dart, 5)
+            pygame.draw.circle(screen,x,dart, 5)
+            score = score + 1
         else:
             pygame.draw.circle(screen,"red",dart, 5)
         pygame.display.flip()
         pygame.time.wait(2000)
 
+    print("My score is :", myself)
+    print("Your score is: ", friend)
+
     break
 
+    # font = pygame.font.Font(None, 48)
+    # text = font.render(<your message>, True, "white")
+    # screen.blit("text", (<x>, <y>)) # where <x> and<y> are coordinates on screen
