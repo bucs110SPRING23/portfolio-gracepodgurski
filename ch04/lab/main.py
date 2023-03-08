@@ -35,7 +35,7 @@ while 1:
     friend = 0
     # players = [myself,friend]
 
-    for i in range(1,21):
+    for i in range(1,11):
         x = random.randrange(0,1050)
         y = random.randrange(0,1050)
         dart = [x,y]
@@ -59,15 +59,17 @@ while 1:
             pygame.display.flip()
             pygame.time.wait(2000)
     if myself > friend:
-        print("I won! My score is:", myself)
+        print("I won! The score is:", myself,":", friend)
+        message = "I won! The score is:", myself,":", friend
     elif friend > myself:
-        print("You won! Your score is: ", friend)
+        print("You won! The score is: ", friend,":", myself)
+        message = "You won! The score is: ", friend,":", myself
     else:
-        print("I guess we are good opponents... it's a tie")
-
+        print("I guess we are good opponents... it's a tie", myself,":" ,friend)
+        message = "I guess we are good opponents... it's a tie", myself,":" ,friend
     break
 
 #  Still trying to figure out the part below
-# font = pygame.font.Font(None, 48)
-# text = font.render("", True, "white")
-# screen.blit("You won!", (200, 200)) # where <x> and<y> are coordinates on screen
+font = pygame.font.Font(None, 48)
+text = font.render(message, True, "white")
+screen.blit(text, (200, 200)) # where <x> and<y> are coordinates on screen
