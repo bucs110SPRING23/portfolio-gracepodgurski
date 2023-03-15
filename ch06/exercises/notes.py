@@ -1,3 +1,6 @@
+import json
+# json is a string format, but not a file format
+
 # Files
 #  - saved program state
 
@@ -30,7 +33,8 @@ def main():
 # charcater for a line break "\n"
     for i in ideas:
         file_pointer.write(i+"\n")
+    file_pointer.close()
 
-        
+
 main()
 
