@@ -11,3 +11,7 @@ def iteration(n):
     print("The loop was executed ", count, "times. ")
     return None
 
+def main():
+  iteration(25)
+
+main()
