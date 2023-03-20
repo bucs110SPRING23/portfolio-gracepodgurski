@@ -1,52 +1,78 @@
 import turtle
 import random
 
-def my_turtle():
+# def petals():
+#     pencil = turtle.Turtle()
+#     pencil.color(petal_color)    
+
+#     pencil.up()
+#     pencil.goto(-250,-25)
+#     pencil.fillcolor(petal_color)
+#     pencil.begin_fill()
+    
+#     pencil.down()
+#     for s in range(9):
+#         pencil.forward(500)
+#         pencil.left(160)
+#     pencil.end_fill()
+
+
+def center():
+    pistil = turtle.Turtle()
+    pistil.color("yellow")  
+    pistil.up()  
+    pistil.goto(0,-66)
+    center_rad = 85
+    pistil.down()
+    pistil.fillcolor('yellow')
+    pistil.begin_fill()
+    pistil.circle(center_rad)
+    pistil.end_fill()
+    
+def stem():
+    stalk = turtle.Turtle()
+    stalk.color("green")
+    stalk.pensize(15)
+    stalk.up()
+    stalk.goto(35,-80)
+
+    stalk.right(70)
+    stalk.down()
+    stalk.forward(300)
+
+
+# ----- Main Code ------
+def main():
+    petal_color = str(input("What color would you like your flower to be? "))
+
     window = turtle.Screen()
     window.bgcolor("black")
+
     pencil = turtle.Turtle()
-    pencil.color("pink")    
+    pencil.color(petal_color)    
 
     pencil.up()
     pencil.goto(-250,-25)
-    pencil.fillcolor('pink')
+    pencil.fillcolor(petal_color)
     pencil.begin_fill()
     
     pencil.down()
+
     for s in range(9):
         pencil.forward(500)
         pencil.left(160)
 
-        # do this in a way where it can move around the middle of the circle
     pencil.end_fill()
 
-    pencil.up()
-    pencil.goto(0,-25)
-    pistil = 50
-    pencil.down()
-    pencil.fillcolor('yellow')
-    pencil.begin_fill()
-    pencil.circle(pistil)
-    pencil.end_fill()
-    
+    center()
+    stem()
 
-    # pencil.up()
-    # pencil.goto(150,0)
-    # pencil.down()
-    # pencil.circle(100)
-
-    # pencil.up()
-    # pencil.goto(-10,-100)
-    # lips = 50
-    # pencil.(lips)
-    # pencil.down()
-
-    # pencil.circle(100)
-    
     window.exitonclick()
 
-def main():
-    my_turtle()
-
-    # Insert code here... make it fun. 
 main()
+
+#  Used this website for tips for drawing the petals https://www.tutorialspoint.com/turtle-programming-in-python
+
+def create_turtle():
+    # try to create a code to create turtles for you
+    return 
