@@ -1,3 +1,5 @@
+import pygame
+
 def iteration(n):
     count = 0
     while n > 1.0:
@@ -9,9 +11,21 @@ def iteration(n):
         count = count + 1
     
     print("The loop was executed ", count, "times. ")
-    return None
+    return count
+
+def iteration_range(upper_limit):
+  objs_in_seq = {}
+  for n in range(2,upper_limit+1):
+    iteration(upper_limit)
+    objs_in_seq.update({count:upper_limit})
+  return objs_in_seq
+
 
 def main():
-  iteration(25)
+  pygame.init()
+  # iteration(25)
+  iteration_range(20)
+  print(objs_in_seq)
+  return None 
 
 main()
