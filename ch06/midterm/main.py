@@ -1,23 +1,6 @@
 import turtle
 import random
 
-# def petals():
-#     pencil = turtle.Turtle()
-#     pencil.color(petal_color)    
-
-#     pencil.up()
-#     pencil.goto(-250,-25)
-#     pencil.fillcolor(petal_color)
-#     pencil.begin_fill()
-    
-#     pencil.down()
-#     for s in range(9):
-#         pencil.forward(500)
-#         pencil.left(160)
-#     pencil.end_fill()
-
-
-
 def center():
     pistil = turtle.Turtle()
     pistil.color("yellow")  
@@ -74,6 +57,6 @@ main()
 
 #  Used this website for tips for drawing the petals https://www.tutorialspoint.com/turtle-programming-in-python
 
-def create_turtle():
-    # try to create a code to create turtles for you
-    return 
+# def create_turtle():
+#     # try to create a code to create turtles for you
+#     return 
