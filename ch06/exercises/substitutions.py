@@ -10,13 +10,13 @@ def main():
 # Use one list to modify another list
 # Which list should you loop through?
 
-    for i in text:
-        text_fptr = text.replace(subs[i]["old"],subs[i]["new"])
+    # for i in text:
+    #     text = text.replace(subs[i]["old"],subs[i]["new"])
 
     for k,v in subs.items():
         text = text.replace(k,v)
 
-    fptr = open("betternews.txt")
+    fptr = open("betternews.txt","w")
     fptr.write(text)
     fptr.close()
 main()
