@@ -1,7 +1,7 @@
 import json
 
 def main():
-    text_fptr = open("news.txt","r").read()
+    text = open("news.txt","r").read()
     sub_fptr = open("subs.json","r")
     subs = json.load(sub_fptr)
 
@@ -11,10 +11,12 @@ def main():
 # Which list should you loop through?
 
     for i in text:
-        text_fptr = text_fptr.replace(subs[i]["old"],subs[i]["new"])
+        text_fptr = text.replace(subs[i]["old"],subs[i]["new"])
 
     for k,v in subs.items():
         text = text.replace(k,v)
 
-    fptr = open()
+    fptr = open("betternews.txt")
+    fptr.write(text)
+    fptr.close()
 main()
