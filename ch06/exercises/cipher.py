@@ -24,4 +24,6 @@ def caesar_cipher(text, shift):
 
 phrase = caesar_cipher("The quick brown fox jumps over the lazy dog",10)
 
-print(phrase)
+file_pointer = open("encrypted.txt", 'w') 
+
+file_pointer.write(phrase)
