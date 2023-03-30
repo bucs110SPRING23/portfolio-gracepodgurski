@@ -9,7 +9,7 @@ class Surface:
         self.rect = Rectangle
         self.image = 'drawing'
 
-        getRect(self)
+
 
 
         
