@@ -73,3 +73,5 @@ while 1:
 font = pygame.font.Font(None, 48)
 text = font.render(message, True, "white")
 screen.blit(text, (200, 200)) # where <x> and<y> are coordinates on screen
+
+
