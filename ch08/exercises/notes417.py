@@ -20,3 +20,15 @@ def main():
 
 
 main()
+
+#  A sprite is an object which moves around and interacts on the screen 
+#   not required in pygame 
+
+# You can inherit something and add something to it rather than retyping the code
+
+def update(self):
+    self.rect =+ 1
+
+#  Use this to make something move every frame 
+
+#  Sprite groups - self.points = pygame.Group
