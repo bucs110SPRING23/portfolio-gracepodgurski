@@ -7,3 +7,16 @@
 # View - display (pygame)
 # Controller - logic (director)
 
+"""
+file: main.py
+"""
+# different classes (in  different files in the same folder) contain the different parts of the code that we will import here
+# Controller class, graph class
+from src.controller import Controller
+
+def main():
+    controller = Controller()
+    controller.mainloop()
+
+
+main()
