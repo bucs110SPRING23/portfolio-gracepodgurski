@@ -15,11 +15,12 @@ class Boxes:
         self.contains_coin = True
         self.is_mystery = bool
         # this can be used for the ground as well 
+        # can inherit block into a power up catagory 
 
 class Score:
     def __init__(self):
         self.start = 0
-        self.coin = self + 5
+        self.coin = self + 5 #this should not be in a class bc it is for the controller 
 
 class Text:
     def __init__(self):
