@@ -33,7 +33,7 @@ class Controller:
                 self.startloop()
 
     def startloop(self):
-        self.menu = pygame_menu.Menu("Start Screen",self.width,self.height)
+        self.menu = pygame_menu.Menu("Start Screen",self.width/2,self.height/2)
         self.menu.add.label("Click to start program",font_size = 28)
         self.menu.add.button("Start",self.startgame ,align=pygame_menu.locals.ALIGN_CENTER)
 
