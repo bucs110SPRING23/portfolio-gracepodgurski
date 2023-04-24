@@ -29,3 +29,9 @@ class StringUtility:
             if str(i) = str(test_strings[0]):
                 append.test_strings(i='*')
 
+    def asciiSum(self):
+        # The range of ASCII values for uppercase letters A-Z is 65-90, and the range for lowercase letters a-z is 97-122
+        return
+    
+    def cipher(self):
+        
