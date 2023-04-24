@@ -2,4 +2,8 @@ from src import controller
 
 def main():
     game = controller.Controller()
-    return
+    game.mainloop()
+
+
+if __name__ == "__main__":
+    main()
