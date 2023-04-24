@@ -1,5 +1,6 @@
 import pygame
 import random
+import  pygame_menu
 
 import src.ball import ball
 
@@ -22,7 +23,7 @@ class Controller:
         self.state = "GAME"
 
 
-    def mainloop():
+    def mainloop(self):
         while True:
             if self.state == "GAME":
                 self.gameloop()
@@ -31,12 +32,20 @@ class Controller:
             elif self.start == "START":
                 self.startloop()
 
-    def startloop():
-        
+    def startloop(self):
+        self.menu = pygame_menu.Menu("Start Screen",self.width,self.height)
+        self.menu.add.label("Click to start program",font_size = 28)
+        self.menu.add.button("Start",self.startgame ,align=pygame_menu.locals.ALIGN_CENTER)
+
+        while self.state == "START":
+            self.menu.update(pygame.get.events())
+            self.menu.draw()
+            self.menu.draw(self.screen)
+            pygame.display.flip()
 
 
 
-    def endloop():
+    def endloop(self):
         font_obj = pygame.font.SysFont(None, 48)
         msg = font_obj.render("You won",)
 
@@ -81,3 +90,6 @@ class Controller:
                 self.ball.size,
             )
             pygame.display.flip()
+
+def startgame(self):
+    self.state = "GAME"
