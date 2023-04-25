@@ -26,13 +26,25 @@ class StringUtility:
     def fixStart(self):
         for i in test_strings:
         # Find a way to make this not alter the first letter
-            if str(i) = str(test_strings[0]):
-                append.test_strings(i='*')
+        # help from https://www.codingfriends.com/index.php/category/programming/python/
+            if str(i) == str(test_strings[0]):
+                return i[0] + i[1:].replace(i[0],'*')  
 
     def asciiSum(self):
         # The range of ASCII values for uppercase letters A-Z is 65-90, and the range for lowercase letters a-z is 97-122
-        pass
+        total = []
+        for i in range(len(test_strings)):
+            total = ascii(test_strings[i]) 
     
-    def cipher(self):
-        pass
-        
+    def cipher(self,text,shift):
+        result = ""
+        for char in test_strings:
+            if char.isalpha():
+                # Determine the case of the character
+                start = ord('A') if char.isupper() else ord('a')
+                # Calculate the new position of the character after the shift
+                new_pos = (ord(char) - start + (5*shift)) % 26
+                # Convert the new position back to a character
+                char = chr(start + new_pos)
+            result += char
+        return result

@@ -1,5 +1,3 @@
-
-
 from stringutility import StringUtility
 
 def main():
