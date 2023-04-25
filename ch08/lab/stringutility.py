@@ -1,7 +1,7 @@
 class StringUtility:
     def __init__(self,string):
-        pass
-    
+        self.string = test_strings
+
     def vowels(self):
         my_vowels =['a','e','i','o','u','A','E','I','O','U']
         count = 0
