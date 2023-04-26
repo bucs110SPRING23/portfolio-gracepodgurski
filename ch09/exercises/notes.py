@@ -50,13 +50,27 @@
 import requests
 import random
 
+class TriviaProxyAPI:
+    def __init__(self):
+        self.url = "https://opentdb.com/api.php?"
+        self.varstr =  "amount=2&category=18"
+
+    def get(self):
+        url = self.url + self.varstr
+        response = requests.get(url)
+        requests.get("https://opentdb.com/api.php?amount=1&category=18")
+        data = response.json()
+        return data['results']
+
 def main():
-    response = requests.get("https://opentdb.com/api.php?amount=1&category=18")
-    print(response.status_code)
-    # print(response.text)
-    # this returns a dictionary - we can do this automatically using method below
-    data = response.json()
-    results = data['results']
+    tp = TriviaProxyAPI()
+    results = tp.get()
+    # response = requests.get("https://opentdb.com/api.php?amount=1&category=18")
+    # print(response.status_code)
+    # # print(response.text)
+    # # this returns a dictionary - we can do this automatically using method below
+    # data = response.json()
+    # results = data['results']
 
     for r in results:
         print(r['question'])
