@@ -2,7 +2,7 @@ import pygame
 import random
 import  pygame_menu
 
-import src.ball import ball
+from src.ball import ball
 
 class Controller:
     def __init__(self):
