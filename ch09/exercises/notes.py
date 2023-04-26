@@ -48,11 +48,31 @@
 
 
 import requests
+import random
 
 def main():
     response = requests.get("https://opentdb.com/api.php?amount=1&category=18")
     print(response.status_code)
-    print(response.text)
+    # print(response.text)
+    # this returns a dictionary - we can do this automatically using method below
+    data = response.json()
+    results = data['results']
+
+    for r in results:
+        print(r['question'])
+        # possibles = [r["correct_answer"],r["incorrect_answers"]]
+        possibles = [r["correct_answer"]] + r["incorrect_answers"]
+        random.shuffle(possibles)
+        print("Make your selection:")
+        for i, p in enumerate(possibles):
+            print(f"{i}){p}")
+
+        selection = int(input(":"))
+        if possibles[selection] == r["correct_answer"]:
+            print("You are correct")
+
+        else:
+            print(f"You need to study more. The correct anawer is: {r['correct_answer']}")
 
 
 main()
