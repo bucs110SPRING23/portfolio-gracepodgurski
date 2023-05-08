@@ -36,9 +36,10 @@ def main():
         object = str(i)
         print(object)
 
-    Poetry.self.title.append(object)
+    Poetry.title.append(object)
     my_poem = Poetry()
     final = requests.get("https://poetrydb.org/title/"+object)
+    print(final)
 
 main()
 
