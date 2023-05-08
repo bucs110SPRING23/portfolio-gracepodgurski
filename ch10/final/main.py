@@ -2,7 +2,8 @@ import requests
 
 class Astrology:
     def __init__(self):
-        self.url = "POST: https://aztro.sameerkumar.website?sign= <sign> &day= <day>"
+        self.url = "https://aztro.sameerkumar.website?"
+        self.additions = "sign=gemini &day= today"
 
     def get(self):
         url = self.url
@@ -14,9 +15,9 @@ class Astrology:
 def main():
     astro = Astrology()
 
-    params = (('sign', 'gemini'),('day', 'today'),)
+    # params = (('sign', 'gemini'),('day', 'today'),)
 
-    requests.post('https://aztro.sameerkumar.website/', params=params)
+    # requests.post('https://aztro.sameerkumar.website/', params=params)
 
     results = astro.get()
     print(results.status_code)
