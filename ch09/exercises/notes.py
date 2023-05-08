@@ -86,7 +86,7 @@ def main():
             print("You are correct")
 
         else:
-            print(f"You need to study more. The correct anawer is: {r['correct_answer']}")
+            print(f"You need to study more. The correct answer is: {r['correct_answer']}")
 
 
 main()
